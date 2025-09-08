@@ -7,6 +7,10 @@ pipeline {
     }
 
     stages {
+        options {
+        // This step cleans the workspace before the build starts.
+        cleanWs()
+        }
         // stage('Build Docker Image') {
         //     steps {
         //         script {
