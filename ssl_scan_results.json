@@ -1,0 +1,169 @@
+{
+    "www.flrs.co.uk": {
+        "certificate": {
+            "validity_expiry": {
+                "status": "PASS",
+                "summary": "Valid until 2026-08-24 (353 days left)",
+                "details": null
+            },
+            "issuer_chain": {
+                "status": "PASS",
+                "summary": "Chain validates to a trusted root",
+                "details": {
+                    "received_chain_has_valid_order": true,
+                    "received_chain_contains_anchor": false
+                }
+            },
+            "domain_san": {
+                "status": "PASS",
+                "summary": "Hostname matches certificate SAN/CN",
+                "details": {
+                    "san": [
+                        "flrs.co.uk",
+                        "www.flrs.co.uk"
+                    ],
+                    "cn": "flrs.co.uk"
+                }
+            },
+            "key_algo": {
+                "status": "PASS",
+                "summary": "Key parameters are strong",
+                "details": {
+                    "type": "RSA",
+                    "bits": 2048,
+                    "curve": null
+                }
+            },
+            "sig_alg": {
+                "status": "PASS",
+                "summary": "Signature algorithm: SHA256",
+                "details": null
+            },
+            "wildcard_multi": {
+                "status": "INFO",
+                "summary": "Wildcard/multi-domain info",
+                "details": {
+                    "wildcard": false,
+                    "san_count": 2,
+                    "san": [
+                        "flrs.co.uk",
+                        "www.flrs.co.uk"
+                    ]
+                }
+            },
+            "ocsp_stapling": {
+                "status": "WARN",
+                "summary": "OCSP stapling not enabled",
+                "details": null
+            },
+            "certificate_transparency": {
+                "status": "PASS",
+                "summary": "Embedded SCT(s) present",
+                "details": {
+                    "count": 3
+                }
+            }
+        },
+        "protocols": {
+            "versions": {
+                "status": "PASS",
+                "summary": "Only TLS 1.2/1.3 enabled",
+                "details": {
+                    "enabled": {
+                        "TLS1.3": true,
+                        "TLS1.2": true,
+                        "TLS1.1": false,
+                        "TLS1.0": false,
+                        "SSL3": false,
+                        "SSL2": false
+                    }
+                }
+            },
+            "pfs": {
+                "status": "PASS",
+                "summary": "Forward secrecy supported",
+                "details": null
+            }
+        },
+        "ciphers": {
+            "strength": {
+                "status": "PASS",
+                "summary": "Strong ciphers only (AES-GCM/ChaCha20)",
+                "details": null
+            },
+            "server_order": {
+                "status": "INFO",
+                "summary": "Cipher preference order not determined (API limitation)",
+                "details": null
+            }
+        },
+        "vulnerabilities": {
+            "heartbleed": {
+                "status": "PASS",
+                "summary": "Not vulnerable to Heartbleed",
+                "details": null
+            },
+            "robot": {
+                "status": "PASS",
+                "summary": "Not vulnerable to ROBOT",
+                "details": {
+                    "result": "RobotScanResultEnum.NOT_VULNERABLE_RSA_NOT_SUPPORTED"
+                }
+            },
+            "poodle": {
+                "status": "PASS",
+                "summary": "SSL 3.0 disabled",
+                "details": null
+            },
+            "beast": {
+                "status": "PASS",
+                "summary": "No BEAST risk detected",
+                "details": null
+            },
+            "crime": {
+                "status": "PASS",
+                "summary": "TLS compression disabled",
+                "details": null
+            },
+            "drown": {
+                "status": "PASS",
+                "summary": "SSL 2.0 disabled",
+                "details": null
+            },
+            "renegotiation": {
+                "status": "PASS",
+                "summary": "Secure renegotiation supported",
+                "details": null
+            },
+            "compression": {
+                "status": "PASS",
+                "summary": "TLS compression disabled",
+                "details": null
+            }
+        },
+        "best_practices": {
+            "hsts": {
+                "status": "PASS",
+                "summary": "HSTS header present",
+                "details": {
+                    "max_age": 31536000,
+                    "preload": true,
+                    "include_subdomains": true
+                }
+            },
+            "session_resumption": {
+                "status": "PASS",
+                "summary": "Session resumption supported",
+                "details": {
+                    "session_id": "TlsResumptionSupportEnum.FULLY_SUPPORTED",
+                    "session_ticket": "TlsResumptionSupportEnum.FULLY_SUPPORTED"
+                }
+            },
+            "dns_caa": {
+                "status": "WARN",
+                "summary": "No CAA records found",
+                "details": null
+            }
+        }
+    }
+}
