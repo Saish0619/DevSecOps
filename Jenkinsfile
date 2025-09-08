@@ -46,7 +46,7 @@ pipeline {
                 // and the '--rm' flag automatically removes the container after it exits.
                 // The container will run the SSLyze_DevSecOps.py script with a target URL.
                 // Make sure to replace 'https://www.example.com' with the actual URL you want to scan.
-                bat 'docker run -v "%cd%":/app devsecops-ssl-scanner www.example.com'
+                bat 'docker run -v "%cd%":/app devsecops-ssl-scanner %TARGET_URL%'
 
                 // The following is an example of the incorrect way, which would cause the error:
                 // sh 'docker build -t devsecops-ssl-scanner .'
