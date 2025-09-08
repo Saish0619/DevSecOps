@@ -47,9 +47,6 @@ pipeline {
                 // The container will run the SSLyze_DevSecOps.py script with a target URL.
                 // Make sure to replace 'https://www.example.com' with the actual URL you want to scan.
                 bat 'docker run -v "%cd%":/app devsecops-ssl-scanner %TARGET_URL%'
-
-                // The following is an example of the incorrect way, which would cause the error:
-                // sh 'docker build -t devsecops-ssl-scanner .'
             }
         }
         
@@ -57,7 +54,7 @@ pipeline {
         stage('Archive Results') {
             steps {
                 // Archive the scan results file so it can be downloaded from the Jenkins UI
-                archiveArtifacts artifacts: 'scan_results.txt', fingerprint: true
+                archiveArtifacts artifacts: 'scan_file.json', fingerprint: true
             }
         }
     }
